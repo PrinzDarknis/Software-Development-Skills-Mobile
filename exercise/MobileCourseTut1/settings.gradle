@@ -1,0 +1,2 @@
+rootProject.name='Mobile Course Tut 1'
+include ':app'
