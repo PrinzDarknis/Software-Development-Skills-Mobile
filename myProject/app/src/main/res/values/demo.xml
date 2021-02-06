@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="demo_names">
+        <item>No Game No Life Vol. 1</item>
+        <item>No Game No Life Vol. 2</item>
+        <item>How a Realist Hero Rebuilt the Kingdom Vol.1</item>
+    </string-array>
+
+    <string-array name="demo_description">
+        <item>In a world where games decide everything - even national borders - a genius brother-sister duo aim to put their gamesmanship to the test…to save humanity!</item>
+        <item>In a world where games decide everything — even national borders — a genius brother-sister duo aim to put their gamesmanship to the test…to save humanity!</item>
+        <item>Summoned to another world to slay the mighty beast…of governance! (And soon to be an anime!) When Kazuya Souma is unexpectedly transported to another world, he knows the people expect a hero. But Souma\'s idea of heroism is more practical than most—he wants to rebuild the flagging economy of the new land he\'s found himself in! Betrothed to the princess and abruptly planted on the throne, this realist hero must gather talented people to help him get the country back on its feet—not through war, or adventure, but with administrative reform!</item>
+    </string-array>
+
+    <string-array name="demo_image">
+        <item>https://bilder.buecher.de/produkte/41/41534/41534812n.jpg</item>
+        <item>https://bilder.buecher.de/produkte/42/42233/42233717n.jpg</item>
+        <item>https://bilder.buecher.de/produkte/50/50452/50452011n.jpg</item>
+    </string-array>
+
+    <string-array name="demo_isbn">
+        <item>0316383112</item>
+        <item>0316385174</item>
+        <item>1626929076</item>
+    </string-array>
+</resources>

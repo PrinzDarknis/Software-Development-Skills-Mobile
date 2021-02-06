@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    ListView bookListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         // activate Toolbar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+
+        // set ListAdapter
+        bookListView = findViewById(R.id.bookListView);
+        BookAdapter adapter = new BookAdapter(this, Book.getDemoData(this));
+        bookListView.setAdapter(adapter);
     }
 
     @Override
