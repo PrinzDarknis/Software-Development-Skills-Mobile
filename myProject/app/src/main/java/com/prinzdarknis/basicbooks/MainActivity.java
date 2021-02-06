@@ -3,10 +3,13 @@ package com.prinzdarknis.basicbooks;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,8 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
         // set ListAdapter
         bookListView = findViewById(R.id.bookListView);
-        BookAdapter adapter = new BookAdapter(this, Book.getDemoData(this));
+        final BookAdapter adapter = new BookAdapter(this, Book.getDemoData(this));
         bookListView.setAdapter(adapter);
+
+        //set listener
+        final Context context = this;
+        bookListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                DetailActivity.openActivity(context, (Book) adapter.getItem(position));
+            }
+        });
     }
 
     @Override

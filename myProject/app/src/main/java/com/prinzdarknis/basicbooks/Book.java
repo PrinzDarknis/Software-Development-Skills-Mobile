@@ -21,7 +21,7 @@ import java.net.URL;
 public class Book implements Serializable {
     String name = "";
     String description = "";
-    Uri image_link = null;
+    String image_link = null;
     String isbn;
 
     public Book (String name) {
@@ -42,7 +42,7 @@ public class Book implements Serializable {
         for (int i = 0; i < names.length; i++) {
            Book book = new Book(names[i]);
            book.description = descriptions[i];
-           book.image_link = Uri.parse(image_links[i]);
+           book.image_link = image_links[i];
            book.isbn = isbns[i];
            books[i] = book;
         }
@@ -50,7 +50,7 @@ public class Book implements Serializable {
         return books;
     }
 
-    private class DownloadAndScaleImageTask extends AsyncTask<Uri, Void, Bitmap> {
+    private class DownloadAndScaleImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView img;
 
         public DownloadAndScaleImageTask(ImageView imageView) {
@@ -58,7 +58,7 @@ public class Book implements Serializable {
         }
 
         @Override
-        protected Bitmap doInBackground(Uri... uris) {
+        protected Bitmap doInBackground(String... strings) {
             Context context = img.getContext();
             Display screen = ((WindowManager)context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
             BitmapFactory.Options options = new BitmapFactory.Options();
@@ -68,7 +68,7 @@ public class Book implements Serializable {
             // open Stream (Source: https://stackoverflow.com/questions/2313148/imageview-setimageuri-does-not-work-when-trying-to-assign-a-r-drawable-x-uri)
             try {
 
-                InputStream in = new URL(image_link.toString()).openStream();
+                InputStream in = new URL(strings[0]).openStream();
                 BufferedInputStream bin = new BufferedInputStream(in);
                 bin.mark(0);
                 BitmapFactory.decodeStream(bin, null, options);
