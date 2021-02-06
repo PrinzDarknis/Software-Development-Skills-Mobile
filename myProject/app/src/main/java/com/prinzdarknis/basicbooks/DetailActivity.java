@@ -32,8 +32,10 @@ public class DetailActivity extends AppCompatActivity {
         // Get Data
         Intent intent = getIntent();
         book = (Book) intent.getSerializableExtra("com.prinzdarknis.basicbooks.BOOK");
-        if (book != null) {
-            finishActivity(Activity.RESULT_CANCELED); // Close Activity
+        if (book == null) {
+            // Close Activity
+            setResult(Activity.RESULT_CANCELED);
+            finish();
         }
 
         // Show Data

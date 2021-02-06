@@ -92,6 +92,17 @@ public class BookAdapter extends BaseAdapter {
         return convertView;
     }
 
+    public void delete(int position) {
+        books.remove(position);
+        notifyDataSetChanged();
+    }
+
+    public void save(int position, Book book) {
+        if (position >= 0) books.set(position, book);
+        else books.add(book);
+        notifyDataSetChanged();
+    }
+
     private class TagLoad {
         TextView nameTextView;
         TextView descTextView;
