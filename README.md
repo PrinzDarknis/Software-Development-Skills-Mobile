@@ -4,8 +4,8 @@
 Open in Android Studio or install APK on an Android Smartphone
 
 ### Video
-[YouTube](https://youtu.be/Pal0kwvFccg)
+[YouTube](https://youtu.be/2kJhCC1m270)
 
 
 ### Learning Diary
-[Learning Diary](https://github.com/PrinzDarknis/Software-Development-Skills-Full-Stack/blob/master/Learning%20Diary.pdf)
+[Learning Diary](https://github.com/PrinzDarknis/Software-Development-Skills-Mobile/blob/master/Learning%20Diary.pdf)
